@@ -3,13 +3,13 @@
 ### With conda
 ```bash
 conda create -n swin_seg python=3.8 -y
-conda activate swin_seg
+source /trinity/shared/opt/anaconda3/bin/activate swin_seg
 ```
 
 ### With mamba
 ```bash
 mamba create -n swin_seg python=3.8 -y
-mamba activate swin_seg
+source /trinity/shared/opt/mambaforge3/bin/activate swin_seg
 ```
 
 ### Next steps
@@ -37,11 +37,11 @@ TODO
 
 ## With test augs (higher scores)
 ```bash
-python tools/test.py configs/swin/upernet_swin_small_patch4_window7_512x512_160k_ade20k.py checkpoints/upernet_swin_small_patch4_window7_512x512.pth --eval mIoU --aug-test
+python tools/test.py configs/swin/upernet_swin_small_patch4_window7_512x512_160k_ade20k.py /gpfs/gpfs0/dermilov_group/checkpoints/swin_seg/upernet_swin_small_patch4_window7_512x512.pth --eval mIoU --aug-test
 ```
 
 ## Without test augs (lower scores)
 ```bash
-python tools/test.py configs/swin/upernet_swin_small_patch4_window7_512x512_160k_ade20k.py checkpoints/upernet_swin_small_patch4_window7_512x512.pth --eval mIoU
+python tools/test.py configs/swin/upernet_swin_small_patch4_window7_512x512_160k_ade20k.py /gpfs/gpfs0/dermilov_group/checkpoints/swin_seg/upernet_swin_small_patch4_window7_512x512.pth --eval mIoU
 ```
 
